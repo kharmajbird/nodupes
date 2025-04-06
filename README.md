@@ -46,11 +46,13 @@ Installing and running the nodupes script:
 ==========================================================
 
 
- git clone https://github.com/kharmajbird/nodupes.git
+    git clone https://github.com/kharmajbird/nodupes.git
 
+    cd nodupes
+    cp -a nodupes.py /usr/local/bin
 
- python3 -m venv venv && source venv/bin/activate
- python3 -m pip install tinytag
+    python3 -m venv venv && source venv/bin/activate
+    python3 -m pip install tinytag
 
 # edit $FILT in nodupes.sh to either start fresh or pisk up where left off
 

@@ -9,7 +9,13 @@
 DIR=$1
 CFG="00-nodupes.cfg"
 IDX=1
+
+# first run; scan all
+FILT="^[[Aa-Zz]"
+
+# be choosy on subsequent runs
 FILT="^[[Aa-Hh]"
+
 
 list_dupe() {
     dupe="$1"
