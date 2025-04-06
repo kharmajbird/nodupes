@@ -14,7 +14,7 @@ IDX=1
 FILT="^[[Aa-Zz]"
 
 # be choosy on subsequent runs
-FILT="^[[Aa-Hh]"
+FILT="^[[Aa-Ii]"
 
 
 list_dupe() {

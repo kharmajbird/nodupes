@@ -39,11 +39,7 @@ Billboards by Year" not realizing that the result would be duplicates of quite
 a few of your original files...
 
 
-==========================================================
-
 Installing and running the nodupes script:
-
-==========================================================
 
 
     git clone https://github.com/kharmajbird/nodupes.git
@@ -54,16 +50,16 @@ Installing and running the nodupes script:
     python3 -m venv venv && source venv/bin/activate
     python3 -m pip install tinytag
 
-# edit $FILT in nodupes.sh to either start fresh or pisk up where left off
+    edit $FILT in nodupes.sh to either start fresh or pisk up where left off
 
 ./nodupes.sh [ /path/to/mp3s ]
 
 
-==========================================================
+======================
 
 Script behavior
 
-==========================================================
+======================
 
 Nodupes will ignore any regex parsing errors that might be thrown.
 
@@ -74,11 +70,13 @@ It is OK to rerun the script. If you do, modify the FILT variable to
 resume the last run and save time by skipping files you have already seen.
 
 
-==========================================================
+
+======================
 
 Sample output and analysis:
+use widescreen
 
-==========================================================
+======================
 
 Found dupe I'm Still In Love With You
 
