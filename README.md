@@ -69,6 +69,9 @@ duplicate, any artist names, and known directories that seriously questionable,
 It is OK to rerun the script. If you do, modify the FILT variable to
 resume the last run and save time by skipping files you have already seen.
 
+Sometimes nodupes will barf when it finds characters it cannot parse.
+It will throw a "file not found" error and skip that directory.
+
 
 
 ======================
