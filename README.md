@@ -1,20 +1,18 @@
 # nodupes
-Utility to crawl large mp3 collections and prompt for the removal of duplicates by title, size, and location
+A Utility to crawl large mp3 collections and prompt for the removal of duplicates by title, size, and location
 
 
-If you have a large mp3 music collection ( > 1,000) you will inevitably
-discover that duplicate files have found its way into your device's playlist,
-and now makes listening to an artist's album can be painful with all of the
-false positives.
+If you have a large mp3 music collection you may discover that duplicate files
+have found their way into your device's playlist, and have cluttered your
+artist's album list with false positives.
 
 This utility may help.
 
 It will not completely solve your duplicate mp3 files troubles, but it is a
 very big start.  To date, there are no known utilities, CLI or GUI, that will
-track duplicates by their mp3 tag, not their filename.
+track duplicates by their mp3 tag, not just their filename.
 
-Filenames can vary, but its tag.title almost does not.
-
+A filename can vary, but its tag.title almost does not.
 
 
 
@@ -23,20 +21,21 @@ titles that are identical. It will then prompt for action-- yea or nay.
 
 
 So far, the regex involved doesn't mind spaces, apostrophes, brackets, or
-parenthesis while processing.  However the script does have issues with
-slashes.
+parenthesis while processing. However the script does have issues with
+slashes and backticks within the name of a title....
 
 
-Operation is very much hands-on: You must visually identify from CLI output
-certain aspects of the duplicates found in order to determine which duplicate
-to either ignore or delete.
+Its operation is very much hands-on: You must visually identify from CLI output
+certain aspects of the duplicates found in your collection of mp3s in order to
+determine which duplicate to either ignore or delete.
+
 
 A lot of the manual eye-balling depends on what's in your mp3 wallet, so to
 speak.
 
-Such as if you had the impulse, as I did, to import a huge collection of "Top
-Billboards by Year" not realizing that the result would be duplicates of quite
-a few of your original files...
+Such as if you had the impulse, as I once did, to import a huge mp3 collection
+"Top Billboards by Year" not realizing that the result would be duplicates of
+quite a few of your original files...
 
 
 Installing and running the nodupes script:
@@ -64,13 +63,17 @@ Script behavior
 Nodupes will ignore any regex parsing errors that might be thrown.
 
 When chosing which duplicates to eliminate, I look at the file sizes of the
-duplicate, any artist names, and known directories that seriously questionable,
+duplicate, any artist names, and known directories that are seriously
+questionable or nostalgic.
 
 It is OK to rerun the script. If you do, modify the FILT variable to
 resume the last run and save time by skipping files you have already seen.
 
 Sometimes nodupes will barf when it finds characters it cannot parse.
 It will throw a "file not found" error and skip that directory.
+
+Scratching those regex itches is encourages, especially when it becomes a pull
+request.
 
 
 
