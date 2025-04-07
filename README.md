@@ -49,7 +49,7 @@ Installing and running the nodupes script:
     python3 -m venv venv && source venv/bin/activate
     python3 -m pip install tinytag
 
-    edit $FILT in nodupes.sh to either start fresh or pisk up where left off
+    edit $FILT in nodupes.sh to either start fresh or pick up with a prior run
 
 ./nodupes.sh [ /path/to/mp3s ]
 
@@ -60,20 +60,24 @@ Script behavior
 
 ======================
 
-Nodupes will ignore any regex parsing errors that might be thrown.
+Nodupes will ignore any regex parsing errors that might be thrown.  You may
+need to him "enter" at the prompt if you notice weird characters being output
+as it hits bad title names.
+
+Sometimes nodupes will barf when it finds characters it cannot parse.  It will
+throw a "file not found" error and skip that directory.
+
+It is OK to rerun the script. If you do, modify the FILT variable to resume the
+last run which saves time by skipping the processing of duplicates you have
+already seen.
 
 When chosing which duplicates to eliminate, I look at the file sizes of the
 duplicate, any artist names, and known directories that are seriously
 questionable or nostalgic.
 
-It is OK to rerun the script. If you do, modify the FILT variable to
-resume the last run and save time by skipping files you have already seen.
 
-Sometimes nodupes will barf when it finds characters it cannot parse.
-It will throw a "file not found" error and skip that directory.
-
-Scratching those regex itches is encourages, especially when it becomes a pull
-request.
+Scratching any regex itches you find is encouraged, especially when it becomes
+a pull request :)
 
 
 
@@ -115,6 +119,15 @@ Do you wish to remove this duplicate: (N/y):
 Do you wish to remove this duplicate: (N/y): 
 
 
+======================
+
+I only want to remove the first of the four duplicates listed above, so I will enter
+"y" followed by three "enters" to remove the duplicate and advance to the next
+duplicate title
+
+======================
+
+
 
 Found dupe I'm Still Standing
 
@@ -126,3 +139,11 @@ Found dupe I'm Still Standing
 
 Do you wish to remove this duplicate: (N/y):
 
+
+======================
+
+This is the duplicate of another title.  In looking at the file sizes of the
+first two, the first is greater, so I will remove only the second duplicate by
+hitting "enter" for the first prompt, then "y" for the second prompt.
+
+Sudo may be required.
